@@ -44,8 +44,14 @@ public:
             {"Slovenia", 46.1512, 14.9955},
             {"Spain", 40.4637, -3.7492},
             {"Sweden", 60.1282, 18.6435}
+
     };
+
+
 };
+
+double Distance_calculation(double RadWidth1, double RadLength1, double RadWidth2, double RadLength2);
+
 
 
 #endif //GOOGLEMAPS_COUNTRY_H
