@@ -6,10 +6,10 @@
 int main() {
     Country country;
 
-    double dWidth1;
-    double dLength1;
-    double dWidth2;
-    double dLength2;
+    double Width1;
+    double Length1;
+    double Width2;
+    double Length2;
 
     std::cout << "Az opciók közül válaszd ki, hogy honnan szeretnél indulni:\n";
     for (const auto countryData : country.eu_countries) {
@@ -21,8 +21,8 @@ int main() {
     for (const auto& countryData : country.eu_countries) {
         if (countryData.name == country.start_country) {
             found = true;
-            dWidth1 = countryData.dWidth ;
-            dLength1 = countryData.dLength;
+            Width1 = countryData.Width ;
+            Length1 = countryData.Length;
             break;
         }
     }
@@ -43,13 +43,13 @@ int main() {
     for (const auto& countryData : country.eu_countries) {
         if (countryData.name == country.target_country) {
             found = true;
-            dWidth2 = countryData.dWidth ;
-            dLength2 = countryData.dLength;
+            Width2 = countryData.Width ;
+            Length2 = countryData.Length;
             break;
         }
     }
 
 
-    Convert_radian(dWidth1 ,dLength1 ,dWidth2 ,dLength2);
+    Convert_radian(Width1 ,Length1 ,Width2 ,Length2);
 
 }

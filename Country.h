@@ -7,13 +7,13 @@ class Country {
 public:
     std::string start_country;
     std::string target_country;
-    double dWidth;
-    double dLength;
+    double Width;
+    double Length;
 
     struct CountryData {
         std::string name;
-        double dWidth;
-        double dLength;
+        double Width;
+        double Length;
     };
 
     std::vector<CountryData> eu_countries = {
@@ -50,7 +50,7 @@ public:
 
 };
 
-double Distance_calculation(double RadWidth1, double RadLength1, double RadWidth2, double RadLength2);
+double Distance_calculation(double RaWidth1, double RaLength1, double RaWidth2, double RaLength2);
 
 
 

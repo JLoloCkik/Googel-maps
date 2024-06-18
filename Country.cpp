@@ -9,7 +9,7 @@ bool Convert_radian(double dWidth1 ,double dLength1,double dWidth2 ,double dLeng
 
     Distance_calculation(RadWidth1, RadLength1, RadWidth2, RadLength2);
 
-};
+}
 
 double Distance_calculation(double RadWidth1 ,double RadLength1,double RadWidth2 ,double RadLength2){
     double distance;
@@ -26,4 +26,4 @@ double Distance_calculation(double RadWidth1 ,double RadLength1,double RadWidth2
     std::cout << distance << "km" <<"\n";
     std::cout << direction << "°" << "\n";
 
-};
+}
