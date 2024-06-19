@@ -1,4 +1,6 @@
 #include <algorithm>
+#include <string>
+#include <vector>
 #ifndef GOOGLEMAPS_COUNTRY_H
 #define GOOGLEMAPS_COUNTRY_H
 
@@ -7,13 +9,13 @@ class Country {
 public:
     std::string start_country;
     std::string target_country;
-    double Width;
-    double Length;
+    double latitude;
+    double longitude;
 
     struct CountryData {
         std::string name;
-        double Width;
-        double Length;
+        double latitude;
+        double longitude;
     };
 
     std::vector<CountryData> eu_countries = {
@@ -50,8 +52,10 @@ public:
 
 };
 
-double Distance_calculation(double RaWidth1, double RaLength1, double RaWidth2, double RaLength2);
 
+bool convert_radian(double latitude1 ,double longitude1,double latitude2 ,double longitude2);
+double distance_calculator(double Radlatitude1 ,double Radlongitude1,double Radlatitude2 ,double Radlongitude2);
+double direction_calculator(double Radlatitude1, double Radlongitude1, double Radlatitude2, double Radlongitude2);
 
 
 #endif //GOOGLEMAPS_COUNTRY_H

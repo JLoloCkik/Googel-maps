@@ -6,10 +6,10 @@
 int main() {
     Country country;
 
-    double Width1;
-    double Length1;
-    double Width2;
-    double Length2;
+    double latitude1;
+    double longitude1;
+    double latitude2;
+    double longitude2;
 
     std::cout << "Az opciók közül válaszd ki, hogy honnan szeretnél indulni:\n";
     for (const auto countryData : country.eu_countries) {
@@ -21,11 +21,12 @@ int main() {
     for (const auto& countryData : country.eu_countries) {
         if (countryData.name == country.start_country) {
             found = true;
-            Width1 = countryData.Width ;
-            Length1 = countryData.Length;
+            latitude1 = countryData.latitude ;
+            longitude1 = countryData.longitude;
             break;
         }
     }
+
 
 
     if (found) {
@@ -43,13 +44,29 @@ int main() {
     for (const auto& countryData : country.eu_countries) {
         if (countryData.name == country.target_country) {
             found = true;
-            Width2 = countryData.Width ;
-            Length2 = countryData.Length;
+            latitude2 = countryData.latitude ;
+            longitude2 = countryData.longitude;
             break;
         }
     }
 
 
-    Convert_radian(Width1 ,Length1 ,Width2 ,Length2);
+
+
+    double Radlatitude1, Radlongitude1, Radlatitude2, Radlongitude2;
+
+    std::cout << Radlatitude1 << "\n";
+    std::cout << Radlongitude1  << "\n";
+    std::cout << Radlatitude2  << "\n";
+    std::cout << Radlongitude2  << "\n";
+    std::cout << "----------------" << "\n";
+
+
+    convert_radian(latitude1 ,longitude1 ,latitude2 ,longitude2);
+
+    distance_calculator(Radlatitude1, Radlongitude1, Radlatitude2, Radlongitude2);
+
+    direction_calculator(Radlatitude1, Radlongitude1, Radlatitude2, Radlongitude2);
+
 
 }
