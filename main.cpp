@@ -1,7 +1,11 @@
 #include <iostream>
 #include <vector>
 #include "Country.h"
-#include "Country.cpp"
+
+using ljankai::Country;
+using ljankai::convert_radian;
+using ljankai::direction_calculator;
+using ljankai::distance_calculator;
 
 int main() {
     Country country;
@@ -36,7 +40,7 @@ int main() {
     }
 
     for (const auto countryData : country.eu_countries) {
-        std::cout << "- " << countryData.name << "\n";
+        std::cout << "- " << countryData.name << std::endl;
     }
 
     std::cin >> country.target_country;
@@ -51,22 +55,15 @@ int main() {
     }
 
 
+    double radlatitude1 =  convert_radian(latitude1);
+    double radlongitude1 =  convert_radian(longitude1);
+    double radlatitude2 =  convert_radian(latitude2);
+    double radlongitude2 =  convert_radian(longitude2);
 
+    double distance = distance_calculator(radlatitude1, radlongitude1, radlatitude2, radlongitude2);
+    double direction = direction_calculator(radlatitude1, radlongitude1, radlatitude2, radlongitude2);
 
-    double Radlatitude1, Radlongitude1, Radlatitude2, Radlongitude2;
-
-    std::cout << Radlatitude1 << "\n";
-    std::cout << Radlongitude1  << "\n";
-    std::cout << Radlatitude2  << "\n";
-    std::cout << Radlongitude2  << "\n";
-    std::cout << "----------------" << "\n";
-
-
-    convert_radian(latitude1 ,longitude1 ,latitude2 ,longitude2);
-
-    distance_calculator(Radlatitude1, Radlongitude1, Radlatitude2, Radlongitude2);
-
-    direction_calculator(Radlatitude1, Radlongitude1, Radlatitude2, Radlongitude2);
-
+    std::cout <<"Távolság: " << distance << "km" << std::endl;
+    std::cout << "Irány: " << direction << std::endl;
 
 }

@@ -4,6 +4,7 @@
 #ifndef GOOGLEMAPS_COUNTRY_H
 #define GOOGLEMAPS_COUNTRY_H
 
+namespace ljankai {    
 
 class Country {
 public:
@@ -20,7 +21,7 @@ public:
 
     std::vector<CountryData> eu_countries = {
             {"Austria", 48.2082, 16.3738},
-            {"Belgium", 	50.8503, 4.3517},
+            {"Belgium", 50.8503, 4.3517},
             {"Bulgaria", 42.6977, 23.3219},
             {"Croatia", 45.815, 15.9819},
             {"Cyprus", 35.1856, 33.3823},
@@ -52,10 +53,8 @@ public:
 
 };
 
-
-bool convert_radian(double latitude1 ,double longitude1,double latitude2 ,double longitude2);
-double distance_calculator(double Radlatitude1 ,double Radlongitude1,double Radlatitude2 ,double Radlongitude2);
-double direction_calculator(double Radlatitude1, double Radlongitude1, double Radlatitude2, double Radlongitude2);
-
-
+double convert_radian(double degree);
+double distance_calculator(double radlatitude1, double radlongitude1, double radlatitude2, double radlongitude2);
+double direction_calculator(double radlatitude1, double radlongitude1, double radlatitude2, double radlongitude2);
+}
 #endif //GOOGLEMAPS_COUNTRY_H
