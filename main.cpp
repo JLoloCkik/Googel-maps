@@ -2,6 +2,7 @@
 #include <vector>
 #include "Country.h"
 
+
 using ljankai::Country;
 using ljankai::convert_radian;
 using ljankai::direction_calculator;
