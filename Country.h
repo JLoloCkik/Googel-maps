@@ -20,6 +20,8 @@ public:
     };
 
     std::vector<CountryData> eu_countries = {
+            {"A", -90,0},
+            {"B", 90,0},
             {"Austria", 48.2082, 16.3738},
             {"Belgium", 50.8503, 4.3517},
             {"Bulgaria", 42.6977, 23.3219},
